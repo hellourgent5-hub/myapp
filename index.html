@@ -1,35 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Signup/Login Demo</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<h1>Signup/Login Demo</h1>
+<!-- Signup form -->
+<input id="username" placeholder="Username">
+<input id="email" placeholder="Email">
+<input id="phone" placeholder="Phone">
+<input id="password" type="password" placeholder="Password">
+<button onclick="signupUser()">Signup</button>
 
-<!-- Signup Form -->
-<div>
-    <h2>Signup</h2>
-    <input id="username" placeholder="Username">
-    <input id="email" placeholder="Email">
-    <input id="phone" placeholder="Phone">
-    <input id="password" type="password" placeholder="Password">
-    <button onclick="signupUser()">Signup</button>
-</div>
-
-<hr>
-
-<!-- Login Form -->
-<div>
-    <h2>Login</h2>
-    <input id="loginIdentifier" placeholder="Username, Email or Phone">
-    <input id="loginPassword" type="password" placeholder="Password">
-    <button onclick="loginUser()">Login</button>
-    <button onclick="logoutUser()">Logout</button>
-</div>
-
-<script src="script.js"></script>
-</body>
-</html>
+<!-- Login form -->
+<input id="loginIdentifier" placeholder="Email or Phone">
+<input id="loginPassword" type="password" placeholder="Password">
+<button onclick="loginUser()">Login</button>
+<button onclick="logoutUser()">Logout</button>
