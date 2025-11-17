@@ -1,6 +1,5 @@
-const API_URL = "https://myapp-backend-cgn4.onrender.com"; // Replace with your backend URL
+const API_URL = "https://myapp-backend-cgn4.onrender.com"; // Replace with your Render URL
 
-// Signup
 async function signupUser() {
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
@@ -12,13 +11,13 @@ async function signupUser() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, phone, password })
     });
+
     const data = await res.json();
     alert(data.message);
 }
 
-// Login
 async function loginUser() {
-    const identifier = document.getElementById("loginIdentifier").value;
+    const identifier = document.getElementById("loginIdentifier").value; // email or phone
     const password = document.getElementById("loginPassword").value;
 
     const res = await fetch(`${API_URL}/login`, {
@@ -26,11 +25,11 @@ async function loginUser() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ identifier, password })
     });
+
     const data = await res.json();
     alert(data.message);
 }
 
-// Logout
 async function logoutUser() {
     const res = await fetch(`${API_URL}/logout`, { method: "POST" });
     const data = await res.json();
